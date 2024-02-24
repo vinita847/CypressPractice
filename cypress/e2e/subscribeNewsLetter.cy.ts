@@ -7,7 +7,6 @@ describe("Test cases for Subscribe functonalities", () => {
 
 
     it("Verify that user is able to successfully subscribe for newletters", () => {
-        //cy.get(".sm:flex").find("")
         cy.getByData("email-input").type(validEmailId);
         cy.getByData("submit-button").should("exist").click();
         cy.getByData("success-message").should("be.visible").contains(`Success: ${validEmailId} has been successfully subscribed`);
